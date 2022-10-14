@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../input.css">
+    <script src="../script.js" defer></script>
+    <title>Save Text in a file</title>
+</head>
+<body class="bg-black flex items-center justify-center h-screen">
+    
+    <div class="wrapper bg-white p-2 rounded flex flex-col">
+        
+        <textarea class="h-48 border border-gray-400 border-solid p-2 rounded outline-none overscroll-auto resize-none" type="text" placeholder="Enter something to save" required></textarea>
+        <div class="file-options flex py-2">
+            <div class="option file-name flex flex-col px-2 pl-0.5">
+                <label>File name</label>
+                <input class="w-28 p-1 outline-none border border-gray-400 rounded text-sm" type="text" placeholder="Enter file name">
+            </div>
+            <div class="option save-as flex flex-col px-2 pr-0.5">
+                <label>Save as</label>
+                <div class="select-menu">
+                    <select class= "w-28 p-1 outline-none border border-gray-400 rounded text-sm" name="" id="">
+                        <!--Inside the value of options we would be using the common MIME types, we can search and get them from google-->
+                        <option value="text/plain">Text file (.txt)</option>
+                        <option value="application/msword">Doc file (.doc)</option>
+                        <option value="aaplication/vnd.ms-powerpoint">PPT file (.ppt)</option>
+                        <option value="text/javascript">JS file (.js)</option>
+                        <option value="text/html">HTML file (.html)</option>
+                        <option value="image/svg+xml">SVG file (.svg)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button class="save-btn w-full bg-black text-white rounded p-1 hover:bg-gray-900 pointer-events-none bg-opacity-80">Save As Text File</button>
+
+    </div>
+</body>
+</html>
